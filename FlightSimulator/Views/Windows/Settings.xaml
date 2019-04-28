@@ -1,0 +1,36 @@
+﻿<Window x:Class="FlightSimulator.Views.Windows.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlightSimulator.Views.Windows"
+        mc:Ignorable="d"
+        Title="Settings" Height="250" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Flight Server IP:" Margin="5" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Text="Flight Info Port:" Margin="5" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Text="Flight Command Port:" Margin="5" VerticalAlignment="Center"/>
+
+        <TextBox Grid.Column="1" Text="{Binding FlightServerIP, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding FlightInfoPort, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding FlightCommandPort, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="5"/>
+
+        <WrapPanel Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="OKButton" Content="OK" Command="{Binding ClickCommand}" Click="CloseWindow_Click" Margin="5" Padding="10,5,10,5"/>
+            <Button x:Name="CancelButton" Content="Cancel" Command="{Binding CancelCommand}" Click="CloseWindow_Click" Margin="5" Padding="5"/>
+        </WrapPanel>
+
+
+    </Grid>
+</Window>
