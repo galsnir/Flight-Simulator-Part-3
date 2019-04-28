@@ -56,8 +56,10 @@ namespace FlightSimulator.Views
             }
         }
 
+        // This is event handler function, for event of clicking on "settings" button
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
+            // If settings window is loaded, then just show it, else create and show it
             if(settingsWindow.IsLoaded)
             {
                 settingsWindow.Show();

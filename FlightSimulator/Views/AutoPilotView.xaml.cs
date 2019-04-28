@@ -24,6 +24,8 @@ namespace FlightSimulator.Views
         public AutoPilotView()
         {
             InitializeComponent();
+
+            // Creating viewmodel object, and setting it as data context
             viewModel = new FlightSimulator.ViewModels.AutoPilotViewModel();
             this.DataContext = viewModel;
         }

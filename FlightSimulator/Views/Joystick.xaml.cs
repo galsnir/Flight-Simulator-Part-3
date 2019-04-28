@@ -147,6 +147,7 @@ namespace FlightSimulator.Views
             if (distance >= canvasWidth / 2 || distance >= canvasHeight / 2)
                 return;
 
+            // Here we rounded, and normalized values of Aileron and Elevator
             Aileron = Math.Round(deltaPos.X / 124, 1);
             Elevator = Math.Round(-deltaPos.Y / 124, 1);
 

@@ -8,8 +8,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
 
+    <!-- Creating layer of dock panel, that wraps flight board, and adding two buttons above of it -->
     <DockPanel >
         <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center">
+            <!-- Creating two buttons inside of wrap panel, upper part of dock panel -->
             <Button Content="Connect" Margin="5" Padding="5" Command="{Binding ConnectsCommand}"/>
             <Button Content="Settings" Click="Settings_Click" Margin="5" Padding="5"/>
         </WrapPanel>
